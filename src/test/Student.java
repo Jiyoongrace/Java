@@ -40,9 +40,10 @@ public class Student {
         // 인자로 들어온 instance가 equals method를 가지고 있는
         // instance의 내용과 같으면 같은 객체로 판별하는 로직을 작성하면 된다.
         // 당연히 처음은 두 instance의 type을 똑같이 맞춰야 한다.
+        // 문자열 비교는 무조건 equals를 쓴다. (==)를 쓰지 않는다.
         Student target = (Student)obj;
         boolean result = false;
-        if(this.getName() == target.getName() && this.getAge() == target.getAge()) {
+        if(this.getName().equals(target.getName()) && this.getAge() == target.getAge()) {
             result = true;
         }
         return result;
